@@ -1,0 +1,13 @@
+<div [class]="color === 'red' || color === 'green' || color === 'yellow' ? color : defaultColor">
+  <div>
+    <label for="color">Color</label>
+    <input type="text" [(ngModel)]="color" name="color">
+  </div>
+  <div>
+    <label for="fontSize">Font Size</label>
+    <input type="number" [(ngModel)]="fontSize" name="fontSize">
+  </div>
+  <div>
+    <p [style.font-size]="fontSize + 'px'">Este es mi parrafito</p>
+  </div>
+</div>

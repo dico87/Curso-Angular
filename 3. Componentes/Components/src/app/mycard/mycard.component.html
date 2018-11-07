@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{mycardModel.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{mycardModel.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="../../assets/image.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <div>
+      <h3>Personal Information</h3>
+      <ul>
+        <li>Age: {{mycardModel.age}}</li>
+        <li>Birthday: {{mycardModel.birthday | date}}</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Job</h3>
+      <ul>
+        <li><b>Company Name:</b> {{mycardModel.company.name}}</li>
+        <li><b>Position:</b> {{mycardModel.company.position}}</li>
+        <li><b>Experience:</b> {{mycardModel.company.experience}}</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Software Languages</h3>
+      <ol>
+        <li>{{mycardModel.languages[0]}}</li>
+        <li>{{mycardModel.languages[1]}}</li>
+        <li>{{mycardModel.languages[2]}}</li>
+      </ol>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="goTwitter(mycardModel.twitter)">Twitter</button>
+  </mat-card-actions>
+</mat-card>
